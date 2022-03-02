@@ -1,0 +1,1164 @@
+/* ------------------------------------------------------------------------------
+
+  Template Name: Morris
+  Description: Morris - App & Product Landing Page
+  Author: Murren
+  Author URI: http://themeforest.net/user/murren20
+  Version: 1.0
+  
+  1.  Global
+
+      1.1 General
+      1.2 Loader
+      1.3 Typography
+      1.4 Forms
+      1.5 Buttons
+      1.6 Icons
+      1.7 Utilities
+
+  2.  Header 
+
+      2.1 Navbar
+      2.2 Brand
+      2.3 Navigation
+      2.4 Navbar Fixed
+
+  3.  Home
+
+      3.1 Magnific popup
+
+  4.  Partners
+
+      4.1 Owl Carousel
+
+  5.  Features
+  6.  Reviews
+  7.  Banner
+  8.  Prices
+  9.  Footer
+  10  Modals
+  11. Responsive styles
+
+      11.1 Min width 768px
+      11.2 Min width 992px
+    
+    
+/*-------------------------------------------------------------------------------
+  1. Global
+-------------------------------------------------------------------------------*/
+
+
+
+/* 1.1 General */
+
+
+
+@import url('bootstrap.min.css');
+@import url('font-awesome.min.css');
+@import url('animate.css');
+@import url('magnific-popup.css');
+@import url('owl.carousel.min.css');
+@import url('owl.theme.default.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,600,700|Playfair+Display:400,400i,700,700i');
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color:#909090;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #DA1B0A;
+}
+
+::selection{
+  background-color:#DA1B0A;
+  color:#fff;
+}
+
+-webkit-::selection{
+    background-color:#DA1B0A;
+    color:#fff;
+}
+
+::-moz-selection{
+    background-color:#DA1B0A;
+    color:#fff;
+}
+
+
+
+/* 1.2 Loader */
+
+
+
+.loader{
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:#fff;
+  color:#4b4b4b;
+  text-align: center;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #DA1B0A;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+
+/* 1.3 Typography */
+
+
+
+h1,
+.h1{ 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #4B4B4C;
+}
+
+h2,
+.h2{ 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #4B4B4C;
+}
+
+h3,
+.h3{
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: 700;
+  color:#4B4B4C;
+}
+
+h4,
+.h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color:#4B4B4C;
+}
+
+h5,
+.h5{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color:#4B4B4C;
+}
+
+h6,
+.h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color:#4B4B4C;
+}
+
+.pf{
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  color:#DA1B0A;
+  -webkit-transition: color .3s ease-out;
+       -o-transition: color .3s ease-out;
+          transition: color .3s ease-out;
+}
+
+a:hover,
+a:focus {
+  color:#DA1B0A;
+  outline: none;
+}
+
+a:focus{
+  text-decoration: none;
+}
+
+
+
+/* 1.4 Forms */
+
+
+
+.form-control,
+textarea.form-control{
+  color: #9F9F9F;
+  border-radius: 0.5rem;
+  padding-left: 22px;
+  -webkit-box-shadow:none;
+          box-shadow:none;
+  -webkit-transition: all .15s;
+       -o-transition: all .15s;
+          transition: all .15s;
+}
+
+.form-control:focus {
+  border-color: #DA1B0A;
+  outline: 0;
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
+
+
+textarea.form-control{
+  height: 120px;
+  padding-top: 14px;
+  resize:none;
+}
+
+.form-control::-moz-placeholder {
+  color: #9F9F9F;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #9F9F9F;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #9F9F9F
+}
+
+.input-group .form-control {
+  border-radius: 30px 0 0 30px;
+}
+
+
+label.error{
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  margin:10px 20px 0;
+  color: #111;
+}
+
+label.error .fa{
+  margin-right: 4px;
+}
+
+
+
+/* 1.5 Buttons */
+
+
+.btn2{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background:white;
+  border:2px solid #DA1B0A;
+  padding:1rem 3rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  color:#DA1B0A;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: background-color .3s ease-out;
+       -o-transition: background-color .3s ease-out;
+          transition: background-color .3s ease-out;
+}
+
+
+.btn2:focus{
+  outline: none!important;
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}
+
+.btn2:hover,
+.btn2:focus{
+  border-color:white;
+  background-color:transparent;
+  color: white;
+}
+
+
+.btn{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background:#DA1B0A;
+  border:2px solid #DA1B0A;
+  padding:1rem 3rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  color:#fff;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: background-color .3s ease-out;
+       -o-transition: background-color .3s ease-out;
+          transition: background-color .3s ease-out;
+}
+
+.btn:focus{
+  outline: none!important;
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}
+
+.btn:hover,
+.btn:focus{
+  border-color:#DA1B0A;
+  background-color:transparent;
+  color: #DA1B0A;
+}
+
+.btn .fa{
+  font-size: 1.1rem;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.btn:hover .fa,
+.btn:focus .fa{
+  color: #DA1B0A;
+}
+
+.btn-b-white{
+  color: #fff;
+  border-color:#fff;
+  background: transparent;
+}
+
+
+.btn-b-white:hover,
+.btn-b-white:focus{
+  border-color:#fff;
+  background-color: #fff;
+  color: #DA1B0A;
+}
+
+.btn-b-gray{
+  border-color: #ececec;
+  background: #ececec;
+  color: #1f1f1f;
+}
+
+
+/* 1.6 Icons */
+
+
+
+.fa{
+  display: inline-block;
+  color:#DA1B0A;
+}
+
+a.fa:hover,
+a.fa:focus{
+  text-decoration: none;
+}
+
+
+
+/* 1.7 Utilities */
+
+
+
+
+.section{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.section-title{
+  margin:0 0 1rem 0;
+}
+
+.section-title + p{
+  margin-bottom: 0;
+}
+
+.section-body{
+  margin-top: 8rem;
+}
+
+.masked{
+  position: relative;
+}
+
+.masked:before{
+  content:'';
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.rel-1{
+  position: relative;
+  z-index: 1;
+}
+
+.text-primary{
+  color:#DA1B0A!important;
+}
+
+.bg-primary{
+  background: #DA1B0A!important;
+}
+
+/* 1.8 Safety Measures. */
+
+
+.mastheadMeasures {
+  background: url(../img/bg/bg-icons-small.jpg) 100%  no-repeat;
+  background-repeat: repeat;
+  background-size: contain;
+}
+.mastheadMeasuresWhiteBG {
+  /* background: url(../img/bg/bg-icons-large-white.jpg) 100%  no-repeat;
+  background-repeat: repeat;
+  background-size: contain; */
+}
+
+/*-------------------------------------------------------------------------------
+  2. Header
+-------------------------------------------------------------------------------*/
+
+
+
+/* 2.1 Navbar */
+
+
+
+.navbar{
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left:0;
+  width: 100%;
+  margin:0;
+  border:0;
+  padding-top:2rem;
+  padding-bottom: 1rem;
+  border-radius: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar-toggler{
+  padding: 0;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.navbar-toggler:focus{
+  outline: none;
+}
+
+.navbar-toggler-icon{
+  display: block;
+  height: 2px;
+  margin-bottom: 3px;
+  background: #fff;
+  margin-bottom: 0.3rem;
+}
+
+
+
+/* 2.2 Brand */
+
+
+
+.navbar-brand{
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  display: inline-block;
+  padding: 0;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+/* 2.4 Navigation */
+
+
+
+.navbar-nav{
+  color: #3b3b3b;
+  padding-top: 1rem;
+}
+
+.navbar-nav .nav-item{
+  margin-bottom: 1px;
+}
+
+.navbar-nav .nav-link{
+  color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active{
+  color: #DA1B0A;
+  background: #DA1B0A;
+  color: #fff;
+}
+
+
+
+
+/* 2.4 Navbar Fixed*/
+
+
+
+.navbar-fixed{
+  position: fixed;
+  top:0;
+  padding-top: 1rem;
+  background-color:rgba(255,255,255,0.95);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.navbar-fixed .navbar-brand{
+  color:#4B4B4C;
+}
+
+.navbar-fixed .navbar-toggler-icon{
+  background: #4B4B4C;
+}
+
+.navbar-fixed .nav-link{
+  color: #3b3b3b;
+}
+.navbar-fixed img.leb-logo-white {
+  display: none;
+}
+.navbar-fixed img.leb-logo-red {
+  display: inline-block;
+}
+.affix-top img.leb-logo-white {
+  display: inline-block;
+}
+.affix-top img.leb-logo-red {
+  display: none;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------
+  3. Home
+-------------------------------------------------------------------------------*/
+
+
+
+.masthead{
+  background: url(../img/bg/masthead.jpg) 50%  no-repeat;
+  background-size: cover;
+}
+
+.opener{
+  color:#fff;
+  padding: 7rem 0;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+}
+
+.lead-text{
+  opacity: 0.7;
+}
+
+.btn-lead:hover,
+.btn-lead:focus{
+  color: #fff;
+  border-color: #fff;
+}
+
+
+
+/* 3.1 Magnific popup */
+
+
+.mfp-zoom-out-cur{
+  padding-right: 0;
+}
+
+.mfp-figure{
+  box-shadow: none;
+}
+
+.mfp-iframe-scaler{
+  overflow: visible;
+}
+
+.mfp-image-holder .mfp-close, 
+.mfp-iframe-holder .mfp-close{
+  padding: 0;
+  margin-top: -10px;
+  font-family: inherit;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 0;
+}
+
+img.mfp-img{
+  min-height: 250px;
+}
+
+.mfp-bottom-bar{
+  margin-top: -30px;
+  letter-spacing: 0.1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.mfp-title{
+  padding-right:5em;
+}
+
+.mfp-bg{
+  background-color: #141414;
+}
+
+.mfp-arrow-left:before, .mfp-arrow-left .mfp-b{
+  display: none;
+}
+
+.mfp-arrow-right:before, .mfp-arrow-right .mfp-b{
+  display: none;
+}
+
+.mfp-wrap .mfp-content {
+  -webkit-perspective: 1300px;
+          perspective: 1300px
+  
+}
+
+.mfp-wrap .mfp-figure,
+.mfp-wrap .mfp-iframe-scaler {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform:scale(0) rotateY(60deg);
+  -o-transform:scale(0) rotateY(60deg);
+  transform:scale(0) rotateY(60deg);
+}
+
+.mfp-bg {
+  opacity: 0;
+  -webkit-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.mfp-wrap .mfp-figure,
+.mfp-wrap .mfp-iframe-scaler {
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+       -o-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+  -webkit-transform: rotateX(-60deg);
+      -ms-transform: rotateX(-60deg);
+       -o-transform: rotateX(-60deg);
+          transform: rotateX(-60deg);
+}
+
+.mfp-bg {
+  opacity: 0;
+  -webkit-transition: .5s;
+       -o-transition: .5s;
+          transition: .5s;
+}
+
+.mfp-wrap.mfp-ready .mfp-figure,
+.mfp-wrap.mfp-ready .mfp-iframe-scaler {
+  opacity: 1;
+  -webkit-transform:rotateX(0);
+      -ms-transform:rotateX(0);
+       -o-transform:rotateX(0);
+          transform:rotateX(0);
+}
+
+.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-wrap.mfp-removing .mfp-figure ,
+.mfp-wrap.mfp-removing .mfp-iframe-scaler {
+  opacity: 0;
+  -webkit-transform: rotateX(-60deg);
+      -ms-transform: rotateX(-60deg);
+       -o-transform: rotateX(-60deg);
+          transform: rotateX(-60deg);
+  
+}
+
+.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* ------------------------------------------------------------------------------- */
+/*  4. Welcome to LEB -- same as Home, just different hover.
+/* ------------------------------------------------------------------------------- */
+
+.btn-lead:hover,
+.btn-lead:focus{
+  color: rgb(248, 2, 2);
+  border-color: rgb(253, 7, 7);
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/*  5. Partners
+/* ------------------------------------------------------------------------------- */
+
+
+
+.partners{
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.partner{
+  opacity: 0.6;
+}
+
+
+
+/* 4.1 Owl carousel */
+
+
+
+.owl-carousel .owl-item img{
+  width: auto;
+}
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span{
+  background: #DA1B0A;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots{
+  margin-top: 3rem;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/*  6. Features
+/* ------------------------------------------------------------------------------- */
+
+
+
+.features .media h1{
+  width: 6rem;
+}
+
+.chart{
+  display: inline-block;
+  margin:0 20px;
+  position: relative;
+  color: #4d606f;
+}
+
+.chart-content{
+  position: absolute;
+  top:28px;
+  left:40px;
+  right: 40px;
+  text-align: center;
+}
+
+.chart-title{
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.chart-number{
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #323c46;
+}
+
+.line{
+  display: block;
+  width:3rem;
+  margin:0.5rem auto;
+  border-radius: 3px;
+  border-top: 3px solid #DA1B0A;
+}
+
+.chart-type{
+  font-size:0.9rem;
+  font-weight: 600;
+}
+
+
+
+/*-------------------------------------------------------------------------------
+  7. Reviews
+-------------------------------------------------------------------------------*/
+
+
+.review img{
+  border-radius: 50%;
+  display: block;
+  margin:0 auto;
+}
+
+
+
+/*-------------------------------------------------------------------------------
+  8. Banner
+-------------------------------------------------------------------------------*/
+
+
+
+.banner{
+  position: relative;
+  padding: 80px 0;
+  background: url(../img/bg/banner.jpg) 50% 50% fixed;
+}
+
+.banner:before{
+  content:'';
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(218, 27, 10,0.9);
+}
+
+
+
+/*-------------------------------------------------------------------------------
+  8. Help
+-------------------------------------------------------------------------------*/
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*-------------------------------------------------------------------------------
+  9. FAQs
+-------------------------------------------------------------------------------*/
+
+
+
+.FAQcontainer{
+  border-radius: 5px; 
+  padding-top: 10px;
+
+}
+
+.faqRow{
+  padding-bottom: 15px; 
+  cursor: pointer;
+}
+.answer{
+  font-size: 15px;
+}
+
+
+/*-------------------------------------------------------------------------------
+  10. Prices
+-------------------------------------------------------------------------------*/
+
+
+.col-price{
+  display: inline-block;
+}
+
+.pricing{
+  background: #f8f8f8;
+  text-align: center;
+  padding: 3.25em 3.25em 3.25em 3.25em;
+}
+
+.pricing-dollar{
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: top;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3b3b3b;
+}
+
+.pricing-price{
+  margin-bottom: 1.625em;
+}
+
+.pricing h6{
+  font-size: 0.8rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.pricing ul li{
+  margin-bottom: 0.5rem;
+}
+.pricing .btn{
+  margin-top: 1rem;
+}
+
+.lead-price .pricing{
+  border:1px solid #cacaca;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
+/*  11. Footer
+/* ------------------------------------------------------------------------------- */
+
+
+
+.footer{
+  padding:60px 0 40px;
+}
+
+.social a{
+  display: inline-block;
+  padding: 1px;
+  margin:0 15px;
+  color: #C2C2C2;
+}
+
+.social a:hover{
+  color: #DA1B0A;
+}
+.copy{
+  margin-top: 10px;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/*  12. Modals
+/* ------------------------------------------------------------------------------- */
+
+
+
+.modal-header{
+  display: block;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
+/*  13. Responsive styles
+/* ------------------------------------------------------------------------------- */
+
+
+
+/* 13.1 Min width 768px */
+
+
+
+@media (min-width: 768px){
+
+
+}
+
+/* 13.2 Min width 992px */
+
+/* ------------------------------------------------------------------------------- */
+/*  14. Categories
+/* ------------------------------------------------------------------------------- */
+.categoriesIcon{
+  margin-left: 35px;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/*  15. Merchants
+/* ------------------------------------------------------------------------------- */
+.stepsContainer{
+  margin-right: 10;
+}
+
+.mastheadMerchants{
+  background: url(../img/bg/merchant.jpg) 50%  no-repeat;
+  background-size: cover;
+  opacity: ;
+}
+
+.mastheadMeasuresApplication{
+  background: url(../img/bg/bg-icons-small.jpg) 100% no-repeat;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.btn-b-app{
+  color:rgb(243, 243, 243);
+  border-color:#fff;
+  background: transparent;
+}
+
+
+.btn-b-app:hover,
+.btn-b-app:focus{
+  border-color:#fff;
+  background-color: #fff;
+  color: #DA1B0A;
+}
+
+
+.modal-header{
+  display: block;
+}
+
+/* ---------------------------------------------------- */
+/* 16. Rider
+/* -----------------------------------------------------*/
+
+.mastheadRider{
+  background: url(../img/bg/rider.jpg) 50%  no-repeat;
+  background-size: cover;
+}
+
+.homeContent{
+  font-size: 80px;
+  font-weight: bold;
+}
+
+
+
+@media (min-width: 992px){
+
+
+  /* Navigation */
+
+
+  .navbar-nav{
+    padding-top: 0;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0;
+  }
+
+  .navbar-nav .nav-item{
+    margin-left: 2rem;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active{
+    color: #DA1B0A;
+    background: none;
+  }
+}
+
+@media (max-width: 814px){
+  .homeContent{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 392px){
+
+  .homeContent{
+    font-size: 12px;
+  }
+}
